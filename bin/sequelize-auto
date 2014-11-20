@@ -32,11 +32,11 @@ if (!!argv.c) {
 configFile.dialect = argv.e || configFile.dialect || 'mysql';
 configFile.port = argv.p || configFile.port || 3306;
 configFile.host = argv.h || configFile.host || 'localhost';
-
+configFile.logging = false;
+configFile.storage = argv.d;
 var auto = new sequelizeAuto(argv.d, argv.u, (argv.x || null), configFile);
 var dir = argv.o || path.resolve(process.cwd() + '/models');
 
 auto.run({spaces: true, indentation: 2, directory: dir}, function(err){
   if (err) throw err;
-  console.log('Done!');
 });
