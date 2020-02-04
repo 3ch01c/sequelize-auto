@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "sqlite3": "~2.1.5",
-    "mysql": "~2.0.0-alpha7",
+    "mysql": "~2.18.1",
     "pg": "~0.10.2",
     "buster": "~0.6.3"
   }
